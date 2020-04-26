@@ -13,29 +13,12 @@ def send(sum=sum):
     if request.method == 'POST':
         num1 = request.form['num1']
         num2 = request.form['num2']
-        num3 = request.form['num3']
-
+       
         operation = request.form['operation']
 
         if operation == 'add':
-            sum = float(num1) + float(num2) + float(num3)
-            return render_template('app.html', sum=sum)
-
-        elif operation == 'subtract':
-            sum = float(num1) - float(num2) - float(num3)
-            return render_template('app.html', sum=sum)
-
-        elif operation == 'multiply':
-            sum = float(num1) * float(num2) * float(num3)
-            return render_template('app.html', sum=sum)
-
-        elif operation == 'divide':
-            sum = (float(num1) / float(num2)) / float(num3)
-            return render_template('app.html', sum=sum)
-
-        elif operation == 'raiz':
-            sum = (float(num1) * float(num2) * float(num3)) ** float(1/2)
-            return render_template('app.html', sum=sum)
+            sum =  1- ( 1- (1/(float(num1))))**(float(num2))
+            return render_template('app.html', sum=round(sum,5))
 
         else:
             return render_template('app.html')
@@ -43,4 +26,4 @@ def send(sum=sum):
 
 if __name__ == ' __main__':
     app.debug = True
-    app.run()
+    app.run(debug=True)

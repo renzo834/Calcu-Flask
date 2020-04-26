@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Calculator</title>
+    <title>Calculadora de riego o falla</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="container">
-      <h3>Calculadora_Simple_versión_1 
+      <h3> <H1 align="center"> Cálculo del riesgo o falla</H1>  <br> Autores: <br> Bach.Soto.O.R <br>Lic.Perez.T.J
         
       </h3>
     </div>
@@ -30,40 +30,30 @@
     <!-- Form -->
     <div class="container">
       <form action="/send" method="POST">
-        <label for="Number One">First Number</label>
+        <label for="Number One">Periodo de retorno (Años)</label>
         <input
           type="text"
-          placeholder="First Number"
+          placeholder="Ingresar periodo de retorno(T)"
           class="u-full-width"
           name="num1"
         />
 
-        <label for="Number Two">Second Number</label>
+        <label for="Number Two">Vida útil del proyecto(Años)</label>
         <input
           type="text"
-          placeholder="Second Number"
+          placeholder="Ingrese vida útil(n)"
           class="u-full-width"
           name="num2"
         />
 
-        <label for="Number three">Three Number</label>
-        <input
-          type="text"
-          placeholder="Three Number"
-          class="u-full-width"
-          name="num3"
-        />
+      
 
-        <label for="Operation">Operation</label>
+        <label for="Operation">Cálculo del riesgo o falla</label>
         <select class="u-full-width" name="operation">
-          <option value="add">Add</option>
-          <option value="subtract">Subtract</option>
-          <option value="multiply">Multiply</option>
-          <option value="divide">Divide</option>
-          <option value="raiz">Raiz</option>
+          <option value="add">Valor =</option>
         </select>
 
-        <input type="submit" value="Calculate" id="calc_btn" />
+        <input type="submit" value="Presiona " id="calc_btn" />
         <br />
         <div class="alert">
           {{ sum }}
