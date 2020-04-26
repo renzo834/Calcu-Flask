@@ -14,13 +14,13 @@ def send(sum=sum):
         num1 = request.form['num1']
         num2 = request.form['num2']
        
-        operation = request.form['operation']
+       ##operation = request.form['operation']
 
-        if operation == 'add':
-            sum =  1- ( 1- (1/(float(num1))))**(float(num2))
-            return render_template('app.html', sum=round(sum,5))
+        ##if operation == 'add':
+        sum =  1- ( 1- (1/(float(num1))))**(float(num2))
+        return render_template('app.html', sum=round(sum,5))
 
-        else:
+    else:
             return render_template('app.html')
 
 
